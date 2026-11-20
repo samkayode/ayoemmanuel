@@ -62,7 +62,7 @@ const About = () => {
     <section
       id="About"
       ref={aboutRef}
-      className="w-full min-h-screen bg-black px-5 py-16 sm:px-8 md:px-12 lg:px-16"
+      className="w-full min-h-screen bg-[#08090b] px-5 py-16 sm:px-8 md:px-12 lg:px-16"
     >
       <div className="max-w-7xl mx-auto">
         {/* Section Heading */}
