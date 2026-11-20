@@ -1,9 +1,11 @@
 @import "tailwindcss";
+
 @media (max-width: 767px) {
   .hero {
-    background-image: url("Aymobile.PNG") !important;
+    background-image: url("/Aymobile.PNG") !important;
   }
 }
+
 body {
   font-family: "DM Sans", sans-serif;
 }

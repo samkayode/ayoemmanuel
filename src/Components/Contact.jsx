@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { FaFacebookF, FaInstagram, FaTiktok, FaYoutube } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
+
 import {
   Mail,
   Phone,
@@ -7,9 +8,6 @@ import {
   Send,
   CalendarDays,
   LoaderCircle,
-  Camera,
-  Users,
-  Play,
 } from "lucide-react";
 
 const Contact = () => {
@@ -59,6 +57,7 @@ const Contact = () => {
 
       if (result.success) {
         setStatus("Your enquiry has been sent successfully. Thank you!");
+
         setFormData({
           name: "",
           email: "",
@@ -94,26 +93,27 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Location",
-      detail: "40 Foxcombe New Addington ",
-      Postcode: "CRO 9EY",
+      detail: "40 Foxcombe New Addington",
+      postcode: "CRO 9EY",
       link: null,
     },
   ];
 
   const inputStyle =
-    "w-full bg-[#171717] border border-[#333333] rounded-lg px-4 py-3.5 text-stone-200 placeholder:text-stone-600 outline-none focus:border-amber-400 transition-colors duration-300";
+    "block w-full min-w-0 max-w-full box-border appearance-none bg-[#171717] border border-[#333333] rounded-lg px-4 py-3.5 text-sm text-stone-200 placeholder:text-stone-600 outline-none focus:border-amber-400 transition-colors duration-300";
 
   return (
     <section
       id="Contact"
-      className="w-full bg-black px-5 py-20 sm:px-8 md:px-12 lg:px-16"
+      className="w-full overflow-hidden bg-black px-4 py-16 sm:px-8 sm:py-20 md:px-12 lg:px-16"
     >
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-auto min-w-0">
         {/* Section Heading */}
         <div className="text-center mb-14">
-          <h2 className="text-2xl sm:text-3xl lg:text-3xl font-semibold text-stone-100 mb-5">
+          <h2 className="text-2xl sm:text-3xl font-semibold text-stone-100 mb-5">
             Let's Connect
           </h2>
+
           <p className="text-stone-400 text-sm sm:text-base max-w-2xl mx-auto leading-7">
             Have an event coming up? Get in touch and let's create something
             memorable together.
@@ -121,15 +121,15 @@ const Contact = () => {
         </div>
 
         {/* Contact Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-14">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-14 min-w-0">
           {/* LEFT SECTION */}
-          <div className="lg:col-span-2 flex flex-col">
+          <div className="lg:col-span-2 flex flex-col min-w-0">
             <div>
               <p className="text-amber-400 text-sm tracking-widest mb-3">
                 CONTACT INFORMATION
               </p>
 
-              <h3 className="text-2xl sm:text-2xl text-stone-100 font-semibold mb-4">
+              <h3 className="text-2xl text-stone-100 font-semibold mb-4">
                 Let's Start a Conversation.
               </h3>
 
@@ -144,12 +144,15 @@ const Contact = () => {
                 const Icon = item.icon;
 
                 return (
-                  <div key={item.title} className="flex items-start gap-2">
+                  <div
+                    key={item.title}
+                    className="flex items-start gap-3 min-w-0"
+                  >
                     <div className="w-12 h-12 shrink-0 rounded-lg bg-[#1c1c1c] flex items-center justify-center">
                       <Icon size={21} className="text-amber-400" />
                     </div>
 
-                    <div>
+                    <div className="min-w-0">
                       <h4 className="text-stone-100 text-sm font-medium mb-1">
                         {item.title}
                       </h4>
@@ -157,12 +160,18 @@ const Contact = () => {
                       {item.link ? (
                         <a
                           href={item.link}
-                          className="text-stone-400 text-sm hover:text-amber-400 transition-colors"
+                          className="text-stone-400 text-sm break-words hover:text-amber-400 transition-colors"
                         >
                           {item.detail}
                         </a>
                       ) : (
                         <p className="text-stone-400 text-sm">{item.detail}</p>
+                      )}
+
+                      {item.postcode && (
+                        <p className="text-stone-400 text-sm">
+                          {item.postcode}
+                        </p>
                       )}
                     </div>
                   </div>
@@ -184,6 +193,7 @@ const Contact = () => {
                 >
                   <FaInstagram size={19} />
                 </a>
+
                 <a
                   href="https://www.facebook.com/share/19oF8sDqmR/?mibextid=wwXIfr"
                   target="_blank"
@@ -208,10 +218,11 @@ const Contact = () => {
           </div>
 
           {/* RIGHT SECTION - BOOKING FORM */}
-          <div className="lg:col-span-3 bg-[#1c1c1c] border border-[#292929] rounded-2xl p-5 sm:p-8 lg:p-10">
+          <div className="lg:col-span-3 min-w-0 bg-[#1c1c1c] border border-[#292929] rounded-2xl p-4 sm:p-8 lg:p-10">
             <div className="mb-8">
               <div className="flex items-center gap-3 mb-3">
                 <CalendarDays size={21} className="text-amber-400" />
+
                 <p className="text-amber-400 text-sm tracking-widest">
                   BOOKING ENQUIRY
                 </p>
@@ -227,15 +238,17 @@ const Contact = () => {
               </p>
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-5">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                <div>
+            <form onSubmit={handleSubmit} className="space-y-5 min-w-0">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 min-w-0">
+                {/* Full Name */}
+                <div className="min-w-0">
                   <label
                     htmlFor="name"
                     className="block text-stone-300 text-sm mb-2"
                   >
                     Full Name
                   </label>
+
                   <input
                     id="name"
                     type="text"
@@ -248,13 +261,15 @@ const Contact = () => {
                   />
                 </div>
 
-                <div>
+                {/* Email */}
+                <div className="min-w-0">
                   <label
                     htmlFor="email"
                     className="block text-stone-300 text-sm mb-2"
                   >
                     Email Address
                   </label>
+
                   <input
                     id="email"
                     type="email"
@@ -267,13 +282,15 @@ const Contact = () => {
                   />
                 </div>
 
-                <div>
+                {/* Phone */}
+                <div className="min-w-0">
                   <label
                     htmlFor="phone"
                     className="block text-stone-300 text-sm mb-2"
                   >
                     Phone Number *
                   </label>
+
                   <input
                     id="phone"
                     type="tel"
@@ -286,19 +303,23 @@ const Contact = () => {
                   />
                 </div>
 
-                <div>
+                {/* Event Type */}
+                <div className="min-w-0">
                   <label
                     htmlFor="eventType"
                     className="block text-stone-300 text-sm mb-2"
                   >
                     Event Type *
                   </label>
+
                   <select
                     id="eventType"
                     name="eventType"
                     value={formData.eventType}
                     onChange={handleChange}
-                    className={`${inputStyle} ${formData.eventType ? "text-stone-200" : "text-stone-600"}`}
+                    className={`${inputStyle} ${
+                      formData.eventType ? "text-stone-200" : "text-stone-600"
+                    }`}
                     required
                   >
                     <option value="" disabled>
@@ -319,13 +340,15 @@ const Contact = () => {
                   </select>
                 </div>
 
-                <div>
+                {/* Event Date */}
+                <div className="min-w-0 w-full">
                   <label
                     htmlFor="eventDate"
                     className="block text-stone-300 text-sm mb-2"
                   >
                     Event Date *
                   </label>
+
                   <input
                     id="eventDate"
                     type="date"
@@ -333,18 +356,20 @@ const Contact = () => {
                     value={formData.eventDate}
                     onChange={handleChange}
                     min={new Date().toISOString().split("T")[0]}
-                    className={`${inputStyle} [color-scheme:dark]`}
+                    className={`${inputStyle} w-full min-w-0 [color-scheme:dark]`}
                     required
                   />
                 </div>
 
-                <div>
+                {/* Event Location */}
+                <div className="min-w-0">
                   <label
                     htmlFor="location"
                     className="block text-stone-300 text-sm mb-2"
                   >
                     Event Location *
                   </label>
+
                   <input
                     id="location"
                     type="text"
@@ -358,13 +383,15 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div>
+              {/* Message */}
+              <div className="min-w-0">
                 <label
                   htmlFor="message"
                   className="block text-stone-300 text-sm mb-2"
                 >
                   Tell Me About Your Event *
                 </label>
+
                 <textarea
                   id="message"
                   name="message"
@@ -377,16 +404,22 @@ const Contact = () => {
                 />
               </div>
 
+              {/* Status Message */}
               {status && (
                 <p
                   role="status"
                   aria-live="polite"
-                  className={`text-sm ${status.startsWith("Your enquiry") ? "text-green-400" : "text-red-400"}`}
+                  className={`text-sm ${
+                    status.startsWith("Your enquiry")
+                      ? "text-green-400"
+                      : "text-red-400"
+                  }`}
                 >
                   {status}
                 </p>
               )}
 
+              {/* Submit Button */}
               <button
                 type="submit"
                 disabled={loading}
