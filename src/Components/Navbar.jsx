@@ -57,7 +57,7 @@ const Navbar = () => {
           </ul>
           <a
             href="#Contact"
-            className=" font-lg px-6 py-4 text-white hover:underline underline-offset-4 hover:text-amber-400 hover:-translate-y-1 transition-all duration-300 text-sm cursor-pointer"
+            className=" font-lg px-6 py-4 text-white hover:underline underline-offset-4 hover:text-amber-400 hover:-translate-y-1 transition-all duration-300 text-xl cursor-pointer"
           >
             Book The Date
           </a>
