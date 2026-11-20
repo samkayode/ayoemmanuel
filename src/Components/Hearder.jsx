@@ -49,10 +49,7 @@ const Header = () => {
     return () => ctx.revert();
   }, []);
   return (
-    <div
-      className="hero relative w-full min-h-screen bg-cover bg-center bg-no-repeat flex items-center overflow-hidden"
-      style={{ backgroundImage: "url('/ayo.PNG')" }}
-    >
+    <div className="hero relative w-full min-h-screen bg-cover bg-center bg-no-repeat flex items-center overflow-hidden">
       <Navbar />
 
       <div
@@ -61,19 +58,20 @@ const Header = () => {
     w-full
     max-w-[90%]
     mx-auto
-    mt-20
+    mt-100
     px-3
     sm:max-w-[85%]
     md:max-w-3xl
-    md:mt-0
+    md:mt-12
     md:ml-12
     lg:max-w-3xl
+    lg:mt-[180px]
     text-left
   "
       >
         <h2
           className="
-  hero-title text-stone-100
+  hero-title text-stone-200
   text-3xl sm:text-4xl
   md:text-5xl lg:text-6xl
   font-bold leading-tight
@@ -82,21 +80,9 @@ const Header = () => {
           Where Music Meets Emotion.
         </h2>
 
-        <h3
-          className="hero-talents flex flex-wrap
-          gap-x-3 gap-y-2 mt-4
-          text-amber-400 text-lg sm:text-xl
-          md:text-2xl font-semibold"
-        >
-          <span>Saxophonist.</span>
-          <span>Afrobeat Percussionist.</span>
-          <span>Bongo Player.</span>
-          <span>Talking Drummer.</span>
-        </h3>
-
         <p
           className="hero-description max-w-2xl
-          text-stone-300 text-sm sm:text-base
+          text-stone-100 text-sm sm:text-base
           md:text-lg leading-relaxed mt-5"
         >
           Creating unforgettable experiences through soulful saxophone

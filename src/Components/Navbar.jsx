@@ -18,12 +18,12 @@ const Navbar = () => {
         {/*
         <div className="container mx-auto flex justify-between px-6 py-4 md:px-25 w-full bg-transparent items-center text-center">
         */}
-        <div className="mx-auto flex justify-between items-center  w-full  px-5 py-4 sm:px-8 md:px-12 lg:px-16">
-          <div>
+        <div className="mx-auto flex justify-between items-center  w-full  px-3  sm:px-8 md:px-12 lg:px-16">
+          <div className="hidden md:block">
             <img
               src="/ayo2.png"
               alt="Ayoemmanuel"
-              className="w-30 sm:w-32 md:w-32 h-auto"
+              className=" w-30 sm:w-32 md:w-32 h-auto"
             />
           </div>
           <ul className="hidden md:flex text-stone-100 ">
@@ -51,16 +51,13 @@ const Navbar = () => {
             >
               Gallery
             </a>
-            <a
-              href="#Contact"
-              className="cursor-pointer px-4 hover:text-amber-400"
-            >
+            <a href="#Contact" className="cursor-pointer px-4 hover:text-">
               Contact
             </a>
           </ul>
           <a
             href="#Contact"
-            className="rounded-md  font-lg px-6 py-4 text-stone-950 bg-amber-400 hover:bg-amber-300 hover:-translate-y-1 transition-all duration-300 text-sm cursor-pointer"
+            className=" font-lg px-6 py-4 text-white hover:underline underline-offset-4 hover:text-amber-400 hover:-translate-y-1 transition-all duration-300 text-sm cursor-pointer"
           >
             Book The Date
           </a>

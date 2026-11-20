@@ -1,11 +1,18 @@
 @import "tailwindcss";
 
+/* Desktop background */
+.hero {
+  background-image: url("/ayo.PNG");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Mobile background */
 @media (max-width: 767px) {
   .hero {
-    background-image: url("/Aymobile.PNG") !important;
-    background-size: cover;
+    background-image: url("/Aymobile.PNG");
     background-position: 55% center;
-    background-repeat: no-repeat;
   }
 }
 
