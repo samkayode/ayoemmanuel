@@ -90,10 +90,10 @@ const Header = () => {
           Bringing every celebration to life with the power of music.
         </p>
 
-        <div className="hero-buttons flex flex-wrap gap-4 mt-8">
+        <div className="hero-buttons flex  gap-4 mt-8">
           <a
             href="#About"
-            className="bg-amber-400 text-stone-950
+            className="bg-amber-400 w-48 text-stone-950
             px-6 py-3 rounded-md font-semibold
             hover:bg-amber-300 hover:-translate-y-1
             transition-all duration-300"
@@ -103,7 +103,7 @@ const Header = () => {
 
           <a
             href="https://youtube.com/@iamayoemmanuel?feature=shared"
-            className="border border-amber-400
+            className="border w-48 border-amber-400
             text-stone-100 px-6 py-3 rounded-md
             font-semibold hover:bg-amber-400
             hover:text-stone-950
