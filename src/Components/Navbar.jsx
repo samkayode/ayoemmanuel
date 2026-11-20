@@ -64,9 +64,9 @@ const Navbar = () => {
 
           <button
             onClick={openMenu}
-            className="text-amber-400 hover:text-amber-300 transition-colors duration-300 flex justify-end cursor-pointer md:hidden"
+            className=" text-amber-200 hover:text-amber-400 transition-colors duration-300 flex justify-end cursor-pointer md:hidden"
           >
-            <Menu size={24} />
+            <Menu size={28} />
           </button>
         </div>
       </div>
