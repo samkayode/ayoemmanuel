@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div className="w-full bg-black text-center ">
@@ -12,8 +12,8 @@ const Footer = () => {
           together again.
         </p>
         <hr className="border-0 h-px w-4/5 bg-amber-200 mx-auto mt-2"></hr>
-        <div className="flex flex-start justify-center py-4 mt-6">
-          <ul className="text-stone-100 flex  text-sm">
+        <div className="flex justify-center overflow-hidden py-4 mt-2">
+          <ul className="text-stone-100  flex flex-col  md:flex-row text-sm">
             <a
               href="#Header"
               className="cursor-pointer  hover:text-amber-400 transition duration-700 px-3"
@@ -46,10 +46,16 @@ const Footer = () => {
             >
               Contact
             </a>
+            <Link
+              to="/support"
+              className="cursor-pointer px-4 hover:text-amber-400 transition duration-700"
+            >
+              Support
+            </Link>
           </ul>
         </div>
         <hr className="border-0 h-px w-4/5 bg-amber-200 mx-auto mt-2"></hr>
-        <div className="text-white flex mt-2  py-4  justify-center  gap-20 px-6">
+        <div className="text-white flex mt-2  py-4  md:justify-center  gap-5  px-6">
           <p>AY0EMMANUEL</p>
           <h3>
             &copy; {new Date().getFullYear()} ayoemmanuel. All rights reserved.

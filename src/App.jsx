@@ -1,14 +1,13 @@
-import { useState } from "react";
+import { Routes, Route, Navigate } from "react-router-dom";
+
 import Hearder from "./Components/Hearder";
 import About from "./Components/About";
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
 import Services from "./Components/Services";
 import Gallery from "./Components/Gallery";
-
-function App() {
-  const [count, setCount] = useState(0);
-
+import Support from "./pages/Support";
+function Home() {
   return (
     <div>
       <Hearder />
@@ -18,6 +17,16 @@ function App() {
       <Contact />
       <Footer />
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/support" element={<Support />} />
+      <Route path="*" element={<Navigate to="/" replace />} />
+    </Routes>
   );
 }
 

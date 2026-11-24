@@ -26,6 +26,12 @@ const Services = () => {
         "Experience a unique musical atmosphere with a blend of saxophone, talking drum and bongo drums for an unforgettable live performance.",
       image: "/2.jpeg",
     },
+    {
+      title: "Festival",
+      description:
+        "Bring energy and excitement to festivals with captivating live music performances that entertain audiences and create unforgettable moments.",
+      image: "/FESTIVAL.jpeg",
+    },
   ];
 
   return (
@@ -51,7 +57,7 @@ const Services = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
             <div
               key={service.title}
