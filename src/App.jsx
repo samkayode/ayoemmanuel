@@ -6,7 +6,7 @@ import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
 import Services from "./Components/Services";
 import Gallery from "./Components/Gallery";
-import Support from "./pages/Support";
+import Support from "./Pages/Support";
 function Home() {
   return (
     <div>
