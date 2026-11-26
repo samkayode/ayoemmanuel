@@ -5,13 +5,21 @@ const galleryItems = [
   {
     id: 1,
     type: "image",
+    title: "AFROBEAT CONCERT",
+    category: "Live Performance",
+    image: "/Dramatic.png",
+    size: "md:row-span-2",
+  },
+  {
+    id: 2,
+    type: "image",
     title: "Live Saxophone Performance",
     category: "Live Performance",
     image: "/private3.PNG",
     size: "md:row-span-2",
   },
   {
-    id: 2,
+    id: 3,
     type: "video",
     title: "Live Musical Experience",
     category: "Live Performance",
@@ -20,7 +28,7 @@ const galleryItems = [
     size: "",
   },
   {
-    id: 3,
+    id: 4,
     type: "video",
     title: "Unforgettable Moments",
     category: "Events",
@@ -30,7 +38,7 @@ const galleryItems = [
   },
 
   {
-    id: 4,
+    id: 5,
     type: "image",
     title: "Musical Excellence",
     category: "Behind The Scenes",
@@ -38,7 +46,7 @@ const galleryItems = [
     size: "md:row-span-2",
   },
   {
-    id: 5,
+    id: 6,
     type: "video",
     title: "Talking Drum Performance",
     category: "Live Performance",
@@ -47,7 +55,7 @@ const galleryItems = [
     size: "",
   },
   {
-    id: 6,
+    id: 7,
     type: "video",
     title: "Wedding Celebration",
     category: "Events",

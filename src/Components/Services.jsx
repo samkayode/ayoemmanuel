@@ -3,11 +3,18 @@ import React from "react";
 const Services = () => {
   const services = [
     {
+      title: "Afrobeat Concert",
+      description:
+        "Bring every celebration to life with captivating percussion rhythms, vibrant beats and energetic live performances for special occasions and events.",
+      image: "/IMG_8589.png",
+    },
+    {
       title: "Birthday Party",
       description:
         "Create unforgettable moments with soulful saxophone performances for birthdays, weddings, private celebrations, corporate events and special occasions.",
       image: "/birthday4.JPG",
     },
+
     {
       title: "Talking Drum",
       description:
