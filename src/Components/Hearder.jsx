@@ -69,29 +69,29 @@ const Header = () => {
     text-left
   "
       >
-        <h2
+        <h3
           className="
   hero-title text-stone-200
-  text-3xl sm:text-3xl
-  md:text-5xl lg:text-3xl
+  text-3xl sm:text-2xl
+  md:text-3xl lg:text-3xl
   font-bold leading-tight
 "
         >
           Where music meets energetic performance, Good vibe, audience
           interaction Emotions and unforgettable memories.
-        </h2>
+        </h3>
 
         <p
           className="hero-description max-w-2xl
           text-stone-200 text-sm sm:text-base
-          md:text-lg leading-relaxed mt-5"
+          md:text-lg leading-relaxed mt-3"
         >
           Creating unforgettable experiences through soulful saxophone
           performances, electrifying DJ sets and captivating drum rhythms.
           Bringing every celebration to life with the power of music.
         </p>
 
-        <div className="hero-buttons flex  gap-4 mt-8">
+        <div className="hero-buttons flex  gap-4 mt-4">
           <a
             href="#About"
             className="bg-amber-400 w-48 text-stone-950
