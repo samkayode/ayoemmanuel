@@ -72,8 +72,8 @@ const Header = () => {
         <h2
           className="
   hero-title text-stone-200
-  text-3xl sm:text-4xl
-  md:text-5xl lg:text-6xl
+  text-3xl sm:text-3xl
+  md:text-5xl lg:text-3xl
   font-bold leading-tight
 "
         >
@@ -83,7 +83,7 @@ const Header = () => {
 
         <p
           className="hero-description max-w-2xl
-          text-stone-100 text-sm sm:text-base
+          text-stone-200 text-sm sm:text-base
           md:text-lg leading-relaxed mt-5"
         >
           Creating unforgettable experiences through soulful saxophone
