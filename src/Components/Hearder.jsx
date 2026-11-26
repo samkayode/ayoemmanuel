@@ -72,7 +72,7 @@ const Header = () => {
         <h3
           className="
   hero-title text-stone-200
-  text-3xl sm:text-2xl
+  text-xl sm:text-2xl
   md:text-3xl lg:text-3xl
   font-bold leading-tight
 "
