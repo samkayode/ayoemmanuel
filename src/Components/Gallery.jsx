@@ -18,15 +18,7 @@ const galleryItems = [
     image: "/private3.PNG",
     size: "md:row-span-2",
   },
-  {
-    id: 3,
-    type: "video",
-    title: "Live Musical Experience",
-    category: "Live Performance",
-    image: "/IMG_4789.jpg",
-    video: "/WhatsApp Video 2026-11-19 at 11.29.16.mp4",
-    size: "",
-  },
+
   {
     id: 4,
     type: "video",
