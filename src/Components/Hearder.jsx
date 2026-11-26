@@ -77,7 +77,8 @@ const Header = () => {
   font-bold leading-tight
 "
         >
-          Where Music Meets Emotion.
+          Where music meets energetic performance, Good vibe, audience
+          interaction Emotions and unforgettable memories.
         </h2>
 
         <p
